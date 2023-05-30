@@ -46,6 +46,17 @@ module.exports.userSignUp = async (req, res) => {
 }
 
 
+module.exports.getUsers = (req, res) => {
+  User.find().sort({ createdAt: -1 })
+    .then((user) => {
+      res.status(200).json(user);
+    });
+
+}
+
+
+
+
 
 module.exports.userLogin = async (req, res) => {
 

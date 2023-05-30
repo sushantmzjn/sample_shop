@@ -24,6 +24,7 @@ router.route('/api/userSignUp').post(validator.body(registerSchema), userControl
 
 router.route('/api/userLogin').post(validator.body(loginSchema), userController.userLogin).all(methodNotAllowed);
 
+router.route('/api/users').get(userController.getUsers).all(methodNotAllowed);
 
 
 
