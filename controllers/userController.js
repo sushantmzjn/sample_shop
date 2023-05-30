@@ -56,8 +56,6 @@ module.exports.getUsers = (req, res) => {
 
 
 
-
-
 module.exports.userLogin = async (req, res) => {
 
   const { email, password } = req.body;
